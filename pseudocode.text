@@ -1,1 +1,6 @@
 Basic idea: give the browser a popup that takes an input from the user, compares it to the randomly generated response from the computer, and declare a winner. 
+
+computerPlay will be computer generated response
+    randomValue will be generated through the basic random integer from min to max function
+
+    

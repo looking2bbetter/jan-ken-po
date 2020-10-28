@@ -7,3 +7,9 @@ let round = function(playerSelection, computerSelection) {
         console.log('The Computer Wins!!!')
     }
 }
+
+let randomMM = function(min, max) {
+    let wholeRando = Math.trunc(Math.random() * 10);
+
+    
+}
