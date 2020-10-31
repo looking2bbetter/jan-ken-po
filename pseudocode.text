@@ -4,3 +4,17 @@ computerPlay will be computer generated response
     randomValue will be generated through the basic random integer from min to max function
 
     
+
+    random number between 1 and 3 solution
+
+    if Math.random pulls out a number * 10 that is 1, 2, or 3, then return that value, 
+    else loop back and find a different number.
+
+
+    alert user to give rock, paper, or scissors
+
+    take user input
+    compare user input to computer answer
+    if userAnswer = rock && computerAnswer == scissors, alert user has won
+
+    else if userAnswer == rock && computerAnswer == paper, alert computer has won
