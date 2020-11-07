@@ -1,8 +1,6 @@
-let userAnswer = prompt("Choose rock, paper, or scissors");
+// let userAnswer = prompt("Choose rock, paper, or scissors");
 
-let translatedUserAnswer = userAnswer.toUpperCase();
-
-console.log(translatedUserAnswer);
+// let translatedUserAnswer = userAnswer.toUpperCase();
 
 let machineAnswer;
 
@@ -32,19 +30,61 @@ console.log(machineAnswer);
 let win = "You Have Won!!!";
 let lose = "You have lost :(";
 let tie = "You Tied! Try again to Win!";
+let winLose;
+let translatedUserAnswer;
 
-if (translatedUserAnswer == "ROCK" && machineAnswer == "Scissors - snip snip") {
-    console.log(win);
-} else if (translatedUserAnswer == "ROCK" && machineAnswer == "Paper") {
-    console.log(lose);
-} else if (translatedUserAnswer == "PAPER" && machineAnswer == "Rock") {
-    console.log(win);
-} else if (translatedUserAnswer == "PAPER" && machineAnswer == "Scissors - snip snip") {
-    console.log(lose);
-} else if (translatedUserAnswer == "SCISSORS" && machineAnswer == "Paper") {
-    console.log(win);
-} else if (translatedUserAnswer == "SCISSORS" && machineAnswer == "Rock") {
-    console.log(lose);
-} else {
-    console.log(tie);
+function determineUserAnswer() {
+    let userAnswer = prompt("Choose rock, paper, or scissors");
+    translatedUserAnswer = userAnswer.toUpperCase(); 
 }
+function playRound(determineUserAnswer, machineAnswer) {
+    // let userAnswer = prompt("Choose rock, paper, or scissors");
+    // let translatedUserAnswer = userAnswer.toUpperCase();    
+    
+    computerPlay();
+    
+    if (translatedUserAnswer == "ROCK" && machineAnswer == "Scissors - snip snip") {
+        console.log(win);
+        winLose = 'win';
+    } else if (translatedUserAnswer == "ROCK" && machineAnswer == "Paper") {
+        console.log(lose);
+        winLose = 'lose';
+    } else if (translatedUserAnswer == "PAPER" && machineAnswer == "Rock") {
+        console.log(win);
+        winLose = 'win';
+    } else if (translatedUserAnswer == "PAPER" && machineAnswer == "Scissors - snip snip") {
+        console.log(lose);
+        winLose = 'lose';
+    } else if (translatedUserAnswer == "SCISSORS" && machineAnswer == "Paper") {
+        console.log(win);
+        winLose = 'win';
+    } else if (translatedUserAnswer == "SCISSORS" && machineAnswer == "Rock") {
+        console.log(lose);
+        winLose = 'lose';
+    } else {
+        console.log(tie);
+    }
+    
+    if (winLose == 'win') {
+        playerScore += 1;
+    } else {
+        computerScore += 1;
+    }
+}
+
+// playRound();
+
+    let playerScore = 0;
+    let computerScore = 0;
+
+function game() {
+    playRound(determineUserAnswer(), machineAnswer);
+    playRound(determineUserAnswer(), machineAnswer);
+    playRound(determineUserAnswer(), machineAnswer);
+    playRound(determineUserAnswer(), machineAnswer);
+    playRound(determineUserAnswer(), machineAnswer);
+}
+
+game();
+console.log(playerScore);
+console.log(computerScore);
