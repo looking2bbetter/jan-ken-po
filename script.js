@@ -23,8 +23,6 @@ let computerPlay = function() {
     }
 }
 
-computerPlay();
-
 console.log(machineAnswer);
 
 let win = "You Have Won!!!";
@@ -37,12 +35,14 @@ function determineUserAnswer() {
     let userAnswer = prompt("Choose rock, paper, or scissors");
     translatedUserAnswer = userAnswer.toUpperCase(); 
 }
+
 function playRound(determineUserAnswer, machineAnswer) {
     // let userAnswer = prompt("Choose rock, paper, or scissors");
     // let translatedUserAnswer = userAnswer.toUpperCase();    
     
+    determineUserAnswer();
     computerPlay();
-    
+
     if (translatedUserAnswer == "ROCK" && machineAnswer == "Scissors - snip snip") {
         console.log(win);
         winLose = 'win';
@@ -78,13 +78,13 @@ function playRound(determineUserAnswer, machineAnswer) {
     let computerScore = 0;
 
 function game() {
-    playRound(determineUserAnswer(), machineAnswer);
-    playRound(determineUserAnswer(), machineAnswer);
-    playRound(determineUserAnswer(), machineAnswer);
-    playRound(determineUserAnswer(), machineAnswer);
-    playRound(determineUserAnswer(), machineAnswer);
+    playRound(determineUserAnswer, machineAnswer);
+    playRound(determineUserAnswer, machineAnswer);
+    playRound(determineUserAnswer, machineAnswer);
+    playRound(determineUserAnswer, machineAnswer);
+    playRound(determineUserAnswer, machineAnswer);
 }
 
 game();
-console.log(playerScore);
-console.log(computerScore);
+// console.log(playerScore);
+// console.log(computerScore);
